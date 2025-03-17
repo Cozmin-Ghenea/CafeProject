@@ -1,0 +1,105 @@
+$DarkCyan: rgb(14, 135, 132);
+$DarkGreyBlue: rgb(51, 61, 75);
+$PaleOrange: rgb(253, 214, 186);
+$LightCream: rgb(254, 252, 247);
+$Grey: rgb(131, 136, 143);
+$primary-color: #3498db;
+$Black: rgb(51, 61, 75);
+
+
+h1{
+  font-family: "Fraunces", serif;
+  font-weight: 900;   
+  color: $LightCream;
+  text-align: center;
+}
+p{
+  font-family: "Barlow", serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+.container {
+  padding: 0 3rem;
+   background-color: $LightCream;;
+}
+
+.descriptionSectionAboutUs {
+  background-image: url("assets/about/desktop/image-hero-whitecup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 5% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10px;
+  height:30rem;
+
+  h1 {
+    font-size: 40px;
+    text-align: left;
+    font-weight: 900;
+    width: 500px;
+    line-height: 48px;
+    
+  }
+
+  p {
+    width: 25%;
+    text-align: left;
+    padding: 3% 0;
+  }
+  button {
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 5%;
+  }
+}
+
+// Our commitmenet
+
+.OurComm {
+  display: flex;
+  gap: 10%; 
+  justify-content: center; 
+  margin: 10% auto;
+
+  .leftSide{
+    margin-left: 10%;
+    img{
+      border-radius: 10px;
+    }
+  
+  }
+  .rightSide{
+    text-align: left;
+    margin-right: 10%;
+    margin-top:5%
+  }
+
+  h1{
+    color:$Black;
+    padding-bottom: 10%;
+    text-align: left;
+
+  }
+  p{
+    color:$Black
+  }
+
+}
+
+// Uncompromising quality
+
+.Uncomp{
+  display: flex;
+  gap: 10%; 
+  justify-content: center; 
+  margin: 10% auto;
+  background-color: $Black;
+
+}
