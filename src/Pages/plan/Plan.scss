@@ -1,0 +1,139 @@
+$DarkCyan: rgb(14, 135, 132);
+$DarkCyanClicked: rgb(102, 210, 207);
+$DarkGreyBlue: rgb(51, 61, 75);
+$PaleOrange: rgb(253, 214, 186);
+$LightCream: rgb(254, 252, 247);
+$Grey: rgb(131, 136, 143);
+$primary-color: #3498db;
+$Black: rgb(51, 61, 75);
+
+
+h1{
+    font-family: "Fraunces", serif;
+    font-weight: 900;   
+    color: $LightCream;
+    text-align: center;
+  }
+  p{
+    font-family: "Barlow", serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .button{
+    transition: background-color 0.3s ease;
+  }
+  .button:hover{
+    background-color: $DarkCyanClicked;
+  
+  }
+  .container {
+    padding: 0 3rem;
+    background-color: $LightCream;;
+  }
+  
+  .CreatePlanSection {
+    background-image: url("assets/plan/desktop/image-hero-blackcup.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 10% ;
+  
+    h1 {
+      font-size: 72px;
+      text-align: left;
+      font-weight: 900;
+      width: 500px;
+      
+    }
+  
+    p {
+      width: 400px;
+      text-align: left;
+      padding: 3% 0  5% 0 ;
+    }
+  }
+
+
+//    Planning 
+
+.PlanSegment{
+    background-image:url("assets/plan/desktop/bg-steps.png");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height:40rem;
+    h1{
+      font-size: 24px;
+      text-align: left;
+      color:$primary-color;
+      padding:10% 0;
+      line-height: 32px;
+    }
+  
+    .bigTitle{
+      color: $PaleOrange;
+      font-size: 72px;
+      margin-top:30%;
+    }
+    
+    .smallerTitle{
+      font-size: 32px;
+      line-height: 36px;
+      width:60%;
+      color:$LightCream;
+    }
+  
+      p{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        width:70%;
+        color:$LightCream
+      }
+      .container-wrapper {
+        position: relative;
+        display: flex; 
+        align-items: center;
+        margin:10%;
+      
+        .container {
+          position: relative;
+          width: 50%; 
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          background-color: transparent;
+          max-height: 28rem;
+          padding:0;
+          margin-top:10%;
+        }
+      
+        .dot {
+          width: 2.2rem;
+          height: 2.2rem;
+          border: 3px solid $DarkCyan;
+          border-radius: 50%;
+          position: absolute;
+          transform: translateY(-50%);
+          z-index: 2;
+        }
+      
+        .line {
+          position: absolute;
+          left:5%;
+          top:0;
+          width: 60%; 
+          height: 3px; 
+          background-color: $PaleOrange;
+          z-index: 1;
+        }
+      }
+  
+  }

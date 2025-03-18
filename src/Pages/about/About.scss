@@ -101,5 +101,91 @@ p{
   justify-content: center; 
   margin: 10% auto;
   background-color: $Black;
+  border-radius: 10px;
+  position:relative;
 
+  .leftSide{
+    text-align: left;
+    margin-left: 5%;
+    margin-top:7%
+  }
+
+  h1{
+    padding-bottom: 10%;
+    text-align: left;
+    font-size: 40px; 
+    line-height: 48px;
+  }
+
+  p{
+    line-height: 26px;
+    text-align: left ;
+    width: 80% ;
+
+  }
+  .rightSide{
+    position: relative;
+    display:flex;
+        img{
+      position: relative;
+      top:-20%;
+      right:15%;
+      border-radius:10px;
+    }
+  }
+}
+
+
+// Our Headquarters 
+
+.Ourheadquarters{
+  margin:8%;
+
+  h1{
+    font-size: 24px;
+    text-align: left;
+    color:$Grey;
+    padding:5% 0;
+    line-height: 32px;
+  }
+
+  .bigTitle{
+    color: $PaleOrange;
+    font-size: 72px;
+  }
+  
+  .smallerTitle{
+    font-size: 32px;
+    line-height: 36px;
+    color:$Black;
+     
+  }
+
+    p{
+      color:$Black;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px; 
+      width:70%
+    }
+  .container-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+
+
+  .container {
+    width: 35%;
+      height: auto;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding:0;
+
+
+  }
+
+  }
 }
