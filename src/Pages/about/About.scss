@@ -6,21 +6,20 @@ $Grey: rgb(131, 136, 143);
 $primary-color: #3498db;
 $Black: rgb(51, 61, 75);
 
-
-h1{
+h1 {
   font-family: "Fraunces", serif;
-  font-weight: 900;   
+  font-weight: 900;
   color: $LightCream;
   text-align: center;
 }
-p{
+p {
   font-family: "Barlow", serif;
   font-size: 16px;
   font-weight: 300;
 }
 .container {
   padding: 0 3rem;
-   background-color: $LightCream;;
+  background-color: $LightCream;
 }
 
 .descriptionSectionAboutUs {
@@ -36,7 +35,7 @@ p{
   box-sizing: border-box;
   position: relative;
   border-radius: 10px;
-  height:30rem;
+  height: 30rem;
 
   h1 {
     font-size: 40px;
@@ -44,7 +43,6 @@ p{
     font-weight: 900;
     width: 500px;
     line-height: 48px;
-    
   }
 
   p {
@@ -64,128 +62,164 @@ p{
 
 .OurComm {
   display: flex;
-  gap: 10%; 
-  justify-content: center; 
+  gap: 10%;
+  justify-content: center;
   margin: 10% auto;
 
-  .leftSide{
+  .leftSide {
     margin-left: 10%;
-    img{
+    img {
       border-radius: 10px;
     }
-  
   }
-  .rightSide{
+  .rightSide {
     text-align: left;
     margin-right: 10%;
-    margin-top:5%
+    margin-top: 5%;
   }
 
-  h1{
-    color:$Black;
+  h1 {
+    color: $Black;
     padding-bottom: 10%;
     text-align: left;
-
   }
-  p{
-    color:$Black
+  p {
+    color: $Black;
   }
-
 }
 
 // Uncompromising quality
 
-.Uncomp{
+.Uncomp {
   display: flex;
-  gap: 10%; 
-  justify-content: center; 
+  gap: 10%;
+  justify-content: center;
   margin: 10% auto;
   background-color: $Black;
   border-radius: 10px;
-  position:relative;
+  position: relative;
 
-  .leftSide{
+  .leftSide {
     text-align: left;
     margin-left: 5%;
-    margin-top:7%
+    margin-top: 7%;
   }
 
-  h1{
+  h1 {
     padding-bottom: 10%;
     text-align: left;
-    font-size: 40px; 
+    font-size: 40px;
     line-height: 48px;
   }
 
-  p{
+  p {
     line-height: 26px;
-    text-align: left ;
-    width: 80% ;
-
+    text-align: left;
+    width: 80%;
   }
-  .rightSide{
+  .rightSide {
     position: relative;
-    display:flex;
-        img{
+    display: flex;
+    img {
       position: relative;
-      top:-20%;
-      right:15%;
-      border-radius:10px;
+      top: -20%;
+      right: 15%;
+      border-radius: 10px;
     }
   }
 }
 
+// Our Headquarters
 
-// Our Headquarters 
+.Ourheadquarters {
+  margin: 8%;
 
-.Ourheadquarters{
-  margin:8%;
-
-  h1{
+  h1 {
     font-size: 24px;
     text-align: left;
-    color:$Grey;
-    padding:5% 0;
+    color: $Grey;
+    padding: 5% 0;
     line-height: 32px;
   }
 
-  .bigTitle{
+  .bigTitle {
     color: $PaleOrange;
     font-size: 72px;
   }
-  
-  .smallerTitle{
+
+  .smallerTitle {
     font-size: 32px;
     line-height: 36px;
-    color:$Black;
-     
+    color: $Black;
   }
 
-    p{
-      color:$Black;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 26px; 
-      width:70%
-    }
+  p {
+    color: $Black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    width: 70%;
+  }
   .container-wrapper {
     display: flex;
     align-items: center;
     position: relative;
     gap: 20px;
 
-
-  .container {
-    width: 35%;
+    .container {
+      width: 35%;
       height: auto;
       border-radius: 10px;
       position: relative;
       display: flex;
       flex-direction: column;
-      padding:0;
-
-
+      padding: 0;
+    }
   }
+}
 
+@media (max-width: 768px) {
+  // First part
+  .descriptionSectionAboutUs {
+    height: 35rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      padding-top: 20%;
+      z-index: 2;
+      width: 450px;
+    }
+    p {
+      text-align: center;
+      margin: 5% 5% 5% 0;
+      width: 100%;
+      font-size: 15px;
+    }
+    .smallDescriptionAboutUs {
+      z-index: 2;
+      font-size: 15px;
+      text-align: center;
+    }
+    .button {
+      z-index: 2;
+      margin: 0 15%;
+      width: 250px;
+      height: 75px;
+      font-size: 18px;
+      margin: 20% 20%;
+    }
   }
 }

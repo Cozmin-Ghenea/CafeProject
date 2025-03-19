@@ -6,7 +6,7 @@ export function About() {
   return (
     <div className="container">
       {/* ------ Menu side */}
-      <Menu />
+      {/* <Menu /> */}
 
       {/* Description side */}
       <div className="descriptionSectionAboutUs">
