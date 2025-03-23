@@ -1,6 +1,6 @@
-import { Bottom } from "../../Component/Bottom";
-import { CoffeeWindow } from "../../Component/CoffeeWindow";
-import { Menu } from "../../Component/Menu";
+import { Bottom } from "../../components/Bottom";
+import { CoffeeWindow } from "../../components/CoffeeWindow";
+import { Menu } from "../../components/Menu";
 import "./Home.scss";
 
 export function Home() {
@@ -10,39 +10,49 @@ export function Home() {
       <Menu />
 
       {/* Description side */}
-      <div className="descriptionSection">
-        <h1>Great coffee made simple.</h1>
-        <p className="smallDescription">
-          Start your mornings with the world’s best coffees. Try our expertly
-          curated artisan coffees from our best roasters delivered directly to
-          your door, at your schedule.
-        </p>
-        <button className="button "> Create your plan </button>
+      <div className="descriptionSection row ">
+        <div className="col-lg-12 col-md-12 col-xs-12 ">
+          <h1>Great coffee made simple.</h1>
+          <p className="smallDescription">
+            Start your mornings with the world’s best coffees. Try our expertly
+            curated artisan coffees from our best roasters delivered directly to
+            your door, at your schedule.
+          </p>
+          <button className="button "> Create your plan </button>
+        </div>
       </div>
 
       {/* --------- Coffee Section  */}
       <div className="Coffe-Section">
-        <h1 className="BackTitle"> Our Collection</h1>
-        <CoffeeWindow
-          image="assets/home/desktop/image-gran-espresso.png"
-          title="Gran Espresso"
-          desc="Light and flavorful blend with cocoa and black pepper for an intense experience"
-        ></CoffeeWindow>
-        <CoffeeWindow
-          image="assets/home/desktop/image-planalto.png"
-          title="Planalto"
-          desc="Brazilian dark roast with rich and velvety body, and hints of fruits and nuts"
-        ></CoffeeWindow>
-        <CoffeeWindow
-          image="assets/home/desktop/image-piccollo.png"
-          title="Piccollo"
-          desc="Mild and smooth blend featuring notes of toasted almond and dried cherry"
-        ></CoffeeWindow>
-        <CoffeeWindow
-          image="assets/home/desktop/image-danche.png"
-          title="Danche"
-          desc="Ethiopian hand-harvested blend densely packed with vibrant fruit notes"
-        ></CoffeeWindow>
+        <div className="row">
+          <div className="col-lg-12 col-md-12 col-xs-12">
+            <h1 className="BackTitle">Our Collection</h1>
+          </div>
+          <CoffeeWindow
+            className="Coffee-window col-lg-3 col-md-3 col-xs-1"
+            image="assets/home/desktop/image-gran-espresso.png"
+            title="Gran Espresso"
+            desc="Light and flavorful blend with cocoa and black pepper for an intense experience"
+          ></CoffeeWindow>
+          <CoffeeWindow
+            className=" Coffee-window col-lg-3 col-md-3 col-xs-1"
+            image="assets/home/desktop/image-planalto.png"
+            title="Planalto"
+            desc="Brazilian dark roast with rich and velvety body, and hints of fruits and nuts"
+          ></CoffeeWindow>
+          <CoffeeWindow
+            className="Coffee-window col-lg-3 col-md-3 col-xs-1"
+            image="assets/home/desktop/image-piccollo.png"
+            title="Piccollo"
+            desc="Mild and smooth blend featuring notes of toasted almond and dried cherry"
+          ></CoffeeWindow>
+          <CoffeeWindow
+            className=" Coffee-window col-lg-3 col-md-3 col-xs-1"
+            image="assets/home/desktop/image-danche.png"
+            title="Danche"
+            desc="Ethiopian hand-harvested blend densely packed with vibrant fruit notes"
+          ></CoffeeWindow>
+        </div>
       </div>
 
       {/* Why Choose Us ? */}
@@ -54,8 +64,8 @@ export function Home() {
           growers to give you a more impactful experience on every level.
         </p>
       </div>
-      <div className="CardContainer">
-        <div className="CardModel">
+      <div className="CardContainer row">
+        <div className="CardModel col-lg-3 col-md-3  col-sm-12 col-xs-12">
           <div className="SvgImage">
             <svg width="75" height="75" viewBox="0 0 73 72">
               <path
@@ -70,7 +80,7 @@ export function Home() {
             each of our roasters.
           </p>
         </div>
-        <div className="CardModel">
+        <div className="CardModel col-lg-3 col-md-3 col-sm-12 col-xs-12">
           <div className="SvgImage">
             <svg width="75" height="75" viewBox="0 0 73 72">
               <path
@@ -85,7 +95,7 @@ export function Home() {
             first shipment.
           </p>
         </div>
-        <div className="CardModel">
+        <div className="CardModel col-lg-3 col-md-3 col-sm-12 col-xs-12">
           <div className="SvgImage">
             <svg width="75" height="75" viewBox="0 0 73 50">
               <path
@@ -118,8 +128,8 @@ export function Home() {
             </div>
           </div>
 
-          <div className="steps-row">
-            <div className="step">
+          <div className="steps-row row">
+            <div className="step col-md-4 col-12 mb-4">
               <h1 className="bigTitle">01</h1>
               <h1 className="smallerTitle">Pick your coffee</h1>
               <p>
@@ -129,7 +139,7 @@ export function Home() {
               </p>
             </div>
 
-            <div className="step">
+            <div className="step col-md-4 col-12 mb-4">
               <h1 className="bigTitle">02</h1>
               <h1 className="smallerTitle">Choose the frequency</h1>
               <p>
@@ -139,7 +149,7 @@ export function Home() {
               </p>
             </div>
 
-            <div className="step">
+            <div className="step col-md-4 col-12 mb-4">
               <h1 className="bigTitle">03</h1>
               <h1 className="smallerTitle">Receive and enjoy!</h1>
               <p>

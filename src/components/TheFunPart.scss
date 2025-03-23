@@ -1,0 +1,155 @@
+$DarkCyan: rgb(14, 135, 132);
+$DarkCyanClicked: rgb(102, 210, 207);
+$DarkGreyBlue: rgb(51, 61, 75);
+$PaleOrange: rgb(253, 214, 186);
+$LightCream: rgb(254, 252, 247);
+$Grey: rgb(131, 136, 143);
+$primary-color: #3498db;
+$Black: rgb(51, 61, 75);
+$lightGrey : rgb(244, 241, 235);
+
+.coffee-selection-container {
+  display: flex;
+  align-items: flex-start; 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.leftSideHardPart {
+  width: 25%;
+  padding: 20px;
+  transition: all 0.3s;
+  position: relative; 
+
+  &.sticky {
+    position: sticky;
+    top: 10px; 
+  }
+
+  span {
+    padding: 0 10px;
+  }
+
+  .pendingOption {
+    color: $Grey;
+  }
+
+  .openOption {
+    color: $DarkCyan;
+  }
+
+  h1 {
+    border-bottom: 1px solid black;
+    color: black;
+    padding: 5% 0;
+    text-align: left;
+    font-size: 24px;
+    cursor:pointer;
+  }
+}
+
+.rightSideHardPart {
+  flex: 1;
+  min-width: 70%;
+  padding: 20px;
+  height: auto;
+
+  h1 {
+    font-size: 40px;
+    color: $Grey;
+    text-align: left;
+  }
+
+  .section {
+    margin-bottom: 20px;
+
+    .title-container {
+        display: flex;
+        align-items: center;  
+        justify-content: space-between; 
+        cursor: pointer;
+        width: 100%; 
+      }
+      
+      .title-container h1 {
+        margin: 30px 0 ;
+        font-size: 40px; 
+      }
+      
+      .title-container svg {
+        margin-left: 8px; 
+        width:20px;
+        height: 20px;
+        color:$DarkCyan;
+    }
+    .options {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        transition: all 0.3s;
+      
+        &.hide {
+          display: none!important;
+        }
+        &.show {
+          display: flex!important;
+        }
+      }
+    .bigger-text{
+        font-size: 24px;
+        text-align: left;
+        padding-bottom: 10px;
+        color:$Black
+        
+    }
+    .small-text{
+        font-size: 16px;
+        text-align: left;
+        color:$Black
+    }
+    .option-button {
+      display: inline-block;
+      width: 30%;
+      height:250px;
+      padding: 10px;
+      margin: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: $lightGrey;
+      color:$Black;
+      transition: background 0.3s, color 0.3s;
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+      &:hover {
+        background: $PaleOrange;
+        color: $Black;
+
+        .bigger-text{
+            color: $Black;
+        }
+        .small-text{
+            color:$Black
+        }
+      }
+
+      &.selected {
+        background: $DarkCyan;
+        color: white;
+
+        .bigger-text{
+            color: white;
+        }
+        .small-text{
+            color:white
+        }
+      }
+    }
+    
+  }
+}
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }

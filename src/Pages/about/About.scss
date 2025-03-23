@@ -18,7 +18,7 @@ p {
   font-weight: 300;
 }
 .container {
-  padding: 0 3rem;
+
   background-color: $LightCream;
 }
 
@@ -46,7 +46,7 @@ p {
   }
 
   p {
-    width: 25%;
+    width: 40%;
     text-align: left;
     padding: 3% 0;
   }
@@ -94,7 +94,7 @@ p {
   display: flex;
   gap: 10%;
   justify-content: center;
-  margin: 10% auto;
+  margin: 20% auto;
   background-color: $Black;
   border-radius: 10px;
   position: relative;

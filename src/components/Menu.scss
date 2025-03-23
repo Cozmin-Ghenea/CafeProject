@@ -1,0 +1,78 @@
+$Black: rgb(51, 61, 75);
+
+.Menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.Logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.combinedBeans {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.firstBean {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 35px;
+  top: 15px;
+  transform: rotate(-10deg);
+  z-index: 0;
+  pointer-events: none;
+  background-color: white;
+  fill: aqua;
+}
+
+.secondBean {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-80deg);
+  left: 40px;
+  top: 20px;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 100%;
+  background-color: white;
+  fill: aqua;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(51, 61, 75);
+  font-family: "Fraunces", serif;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  font-family: "Barlow", serif;
+  right: 50px;
+
+  a {
+    font-weight: 600;
+    color: rgb(131, 136, 143);
+    font-size: 16px;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $Black;
+    }
+  }
+}

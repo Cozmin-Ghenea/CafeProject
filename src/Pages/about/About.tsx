@@ -1,12 +1,12 @@
-import { Bottom } from "../../Component/Bottom";
-import { Menu } from "../../Component/Menu";
+import { Bottom } from "../../components/Bottom";
+import { Menu } from "../../components/Menu";
 import "./About.scss";
 
 export function About() {
   return (
     <div className="container">
       {/* ------ Menu side */}
-      {/* <Menu /> */}
+      <Menu />
 
       {/* Description side */}
       <div className="descriptionSectionAboutUs">

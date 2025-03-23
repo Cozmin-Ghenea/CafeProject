@@ -5,7 +5,7 @@ export default function NotFoundPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center p-6">
       <motion.h1
-        className="text-6xl font-bold text-gray-800"
+        style={{ color: "black", alignContent: "center" }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -13,22 +13,24 @@ export default function NotFoundPage() {
         404
       </motion.h1>
       <motion.p
-        className="text-lg text-gray-600 mt-4"
+        style={{ color: "black", alignContent: "center", textAlign: "center" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        Oops! Pagina pe care o cauți nu există.
+        Oops! This page doesn't exist.
       </motion.p>
       <motion.div
-        className="mt-6"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.5 }}
       >
         <Link to="/">
-          <button className="px-6 py-3 text-lg bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition">
-            Înapoi Acasă
+          <button
+            style={{ margin: "10% 44%", width: "200px" }}
+            className="px-6 py-3  text-lg bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition"
+          >
+            Back home
           </button>
         </Link>
       </motion.div>

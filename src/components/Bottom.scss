@@ -1,21 +1,21 @@
-$Black: rgb(51, 61, 75);
+$PaleOrange: rgb(253, 214, 186);
 
-.Menu {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-  
+.bottom {
+  background-color: rgb(44, 52, 62);
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+
   .Logo {
     display: flex;
     flex-direction: row;
     align-items: center;
     position: relative;
-    
+    color: white;
   }
-  
+
   .combinedBeans {
     position: relative;
     width: 50px;
@@ -24,7 +24,7 @@ $Black: rgb(51, 61, 75);
     display: flex;
     align-items: center;
   }
-  
+
   .firstBean {
     position: absolute;
     width: 15px;
@@ -34,10 +34,9 @@ $Black: rgb(51, 61, 75);
     transform: rotate(-10deg);
     z-index: 0;
     pointer-events: none;
-    background-color: white;
-    fill: aqua;
- }
-  
+    background-color: rgb(44, 52, 62);
+  }
+
   .secondBean {
     position: absolute;
     width: 15px;
@@ -48,35 +47,46 @@ $Black: rgb(51, 61, 75);
     z-index: 1;
     pointer-events: none;
     border-radius: 100%;
-    background-color: white;
-    fill: aqua;
+    background-color: rgb(44, 52, 62);
   }
-  
+
   .logoText {
     font-size: 24px;
     font-weight: bold;
-    color:rgb(51, 61, 75);
+    color: white !important;
     font-family: "Fraunces", serif;
-    
   }
-  
+
   .tags {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 40px;
     font-family: "Barlow", serif;
-    right: 50px;
-  
+  }
+
+  .tags a {
+    font-weight: 600;
+    color: rgb(131, 136, 143);
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  .tags a:hover {
+    color: white;
+  }
+
+  .socials {
+    display: flex;
+    gap: 20px;
+    color: white;
+
     a {
-     
-      font-weight: 600;
-      color: rgb(131, 136, 143);
-      font-size: 16px;
+      color: white;
       transition: color 0.3s ease;
-      &:hover {
-        color: $Black;
+      :hover {
+        color: $PaleOrange;
       }
     }
   }
-  
+}
