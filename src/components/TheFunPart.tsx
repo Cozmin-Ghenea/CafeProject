@@ -55,7 +55,24 @@ export default function CoffeeSelection() {
   const isGrindDisabled = selectedButtons["Preferences"] === "Capsule";
 
   console.log(selectedButtons);
+  let exists = Object.keys(selectedButtons).includes("Grind Option");
 
+  useEffect(() => {
+    if (exists && isGrindDisabled) {
+      setOpenSections((prevSections) =>
+        prevSections.filter((id) => id !== "Grind Option")
+      );
+  
+      setSelectedButtons((prevSelected) => {
+        const updatedButtons = { ...prevSelected };
+        delete updatedButtons["Grind Option"]; // Elimină "Grind Option" din selectedButtons
+        return updatedButtons;
+      });
+    }
+  }, [selectedButtons]);
+
+
+  console.log(exists)
   return (
     <div className="coffee-selection-container">
       <div className={`leftSideHardPart ${isSticky ? "sticky" : ""}`}>
@@ -179,7 +196,17 @@ export default function CoffeeSelection() {
             </div>
           </div>
         ))}
+      
+        {/* Conclusion Part */}
+        <div className="conclusion">
+          <p> ORDER SUMMARY</p>
+          <h1></h1>
+        </div>
+        <button className="conclusion">Create my plan!</button>
+      
       </div>
+
+
     </div>
   );
 }
