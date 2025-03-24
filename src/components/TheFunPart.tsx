@@ -12,6 +12,13 @@ export default function CoffeeSelection() {
   const [isSticky, setIsSticky] = useState(false);
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
+  function allKeysHaveValues(obj: { [key: string]: string }): boolean {
+    const hasAllValues = Object.values(obj).every((value) => value !== "");
+    const requiredLength = isGrindDisabled ? 4 : 5;
+
+    return hasAllValues && Object.keys(obj).length === requiredLength;
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       const container = document.querySelector(".coffee-selection-container");
@@ -54,25 +61,56 @@ export default function CoffeeSelection() {
 
   const isGrindDisabled = selectedButtons["Preferences"] === "Capsule";
 
-  console.log(selectedButtons);
   let exists = Object.keys(selectedButtons).includes("Grind Option");
+
+  function useTypingEffect(text: string = "____", speed = 100) {
+    const [typedText, setTypedText] = useState("");
+
+    useEffect(() => {
+      if (!text || text === "undefined") {
+        setTypedText("____");
+        return;
+      }
+
+      let i = 0;
+      let newText = "";
+
+      function typeChar() {
+        if (i < text.length) {
+          newText += text[i];
+          setTypedText(newText);
+          i++;
+          setTimeout(typeChar, speed);
+        }
+      }
+
+      setTypedText("");
+      typeChar();
+    }, [text]);
+
+    return typedText;
+  }
+
+  const Preferences = useTypingEffect(selectedButtons["Preferences"] ?? "____");
+  const Bean = useTypingEffect(selectedButtons["Bean Type"] ?? "____");
+  const Quantity = useTypingEffect(selectedButtons["Quantity"] ?? "____");
+  const Grind = useTypingEffect(selectedButtons["Grind Option"] ?? "____");
+  const Deliveries = useTypingEffect(selectedButtons["Deliveries"] ?? "____");
 
   useEffect(() => {
     if (exists && isGrindDisabled) {
       setOpenSections((prevSections) =>
         prevSections.filter((id) => id !== "Grind Option")
       );
-  
+
       setSelectedButtons((prevSelected) => {
         const updatedButtons = { ...prevSelected };
-        delete updatedButtons["Grind Option"]; // Elimină "Grind Option" din selectedButtons
+        delete updatedButtons["Grind Option"];
         return updatedButtons;
       });
     }
   }, [selectedButtons]);
-
-
-  console.log(exists)
+  console.log(selectedButtons);
   return (
     <div className="coffee-selection-container">
       <div className={`leftSideHardPart ${isSticky ? "sticky" : ""}`}>
@@ -152,7 +190,7 @@ export default function CoffeeSelection() {
           },
           {
             id: "Deliveries",
-            title: "Delivery Frequency",
+            title: "How often should we deliver?",
             options: ["Every week", "Every 2 weeks", "Every month"],
             smallText: [
               "$7.20 per shipment. Includes free first-class shipping.",
@@ -196,17 +234,29 @@ export default function CoffeeSelection() {
             </div>
           </div>
         ))}
-      
+
         {/* Conclusion Part */}
         <div className="conclusion">
           <p> ORDER SUMMARY</p>
-          <h1></h1>
+          <h1>
+            “I drink my coffee using {!isGrindDisabled && "as "}
+            <span>{Preferences}</span>, with a <span>{Bean}</span> type of bean.
+            <span>{Quantity}</span>{" "}
+            {!isGrindDisabled ? (
+              <>
+                ground ala <span>{Grind}</span>,
+              </>
+            ) : null}
+            sent to me <span>{Deliveries}</span>.”
+          </h1>
         </div>
-        <button className="conclusion">Create my plan!</button>
-      
+        <button
+          className="conclusionButton"
+          disabled={allKeysHaveValues(selectedButtons) ? false : true}
+        >
+          Create my plan!
+        </button>
       </div>
-
-
     </div>
   );
 }
