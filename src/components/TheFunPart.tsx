@@ -110,7 +110,6 @@ export default function CoffeeSelection() {
       });
     }
   }, [selectedButtons]);
-  console.log(selectedButtons);
   return (
     <div className="coffee-selection-container">
       <div className={`leftSideHardPart ${isSticky ? "sticky" : ""}`}>
@@ -240,14 +239,13 @@ export default function CoffeeSelection() {
           <p> ORDER SUMMARY</p>
           <h1>
             “I drink my coffee using {!isGrindDisabled && "as "}
-            <span>{Preferences}</span>, with a <span>{Bean}</span> type of bean.
+            <span>{Preferences}</span>, with a <span>{Bean}</span> type of bean.&nbsp;
             <span>{Quantity}</span>{" "}
             {!isGrindDisabled ? (
               <>
-                ground ala <span>{Grind}</span>,
+                ground ala <span>{Grind}</span> ,&nbsp; 
               </>
-            ) : null}
-            sent to me <span>{Deliveries}</span>.”
+            ) : null}  sent to me <span>{Deliveries}</span> &nbsp;.”
           </h1>
         </div>
         <button

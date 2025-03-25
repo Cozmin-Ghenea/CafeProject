@@ -99,7 +99,8 @@ $lightGrey : rgb(244, 241, 235);
         font-size: 24px;
         text-align: left;
         padding-bottom: 10px;
-        color:$Black
+        color:$Black;
+        margin-top:-50px 
         
     }
     .small-text{
@@ -111,8 +112,8 @@ $lightGrey : rgb(244, 241, 235);
       display: inline-block;
       width: 30%;
       height:250px;
-      padding: 10px;
-      margin: 5px 10px;
+      padding: 23px;
+      margin: 50px 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
       background: $lightGrey;
@@ -155,6 +156,7 @@ $lightGrey : rgb(244, 241, 235);
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+    
 
     p{
       opacity: 0.5;
@@ -164,6 +166,7 @@ $lightGrey : rgb(244, 241, 235);
       color:white;
       font-size: 24px;
       padding: 0px 20% 5% 10%;
+      line-height: 40px;
     }
       span{
         color:$DarkCyan
@@ -186,5 +189,82 @@ $lightGrey : rgb(244, 241, 235);
 .disabled {
     opacity: 0.5;
     pointer-events: none;
+    
+  }
+
+
+
+
+  @media (max-width: 768px) {
+
+   
+    .leftSideHardPart {
+      display:none
+    }
+
+    .rightSideHardPart{
+      width:100%;
+      
+      .section{ 
+        .options:last-child {
+          margin-bottom: 100px;
+        }
+        .option-button {
+        width:100%;
+        height:auto;
+        margin: 10px 0
+      }
+      .bigger-text{
+        margin:0;
+        
+      }
+
+      .title-container h1{
+        font-size: 24px;;
+      }
+      }
+
+      .conclusion h1{
+        padding:0 30px 30px 30px;
+       }
+
+       .conclusionButton{
+        transform: translateX(70%);
+        float:none;
+        margin:10% 0;
+       }
+    }
+  }
+  @media(min-width: 769px) and (max-width: 1000px)  {
+    
+    .coffee-selection-container{
+      padding:20px 0;
+    }
+    
+    .leftSideHardPart {
+      display:none;
+    }
+
+    
+    .rightSideHardPart{
+     padding:0;
+
+     .section{
+      width:100%;
+
+      .option-button{
+        margin:50px 5px;
+      }
+     }
+      .conclusionButton{
+        transform: translateX(140%);
+        margin-top: 5%;
+        float:none;
+       }
+     
+    }
+  }
+
+  @media(min-width: 1001px) and (max-width: 1200px)  {
     
   }
