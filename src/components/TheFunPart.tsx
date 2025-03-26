@@ -2,13 +2,23 @@ import { useState, useEffect, useRef } from "react";
 import "./TheFunPart.scss";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { useNavigate } from "react-router-dom";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+} from "@mui/material";
 
 export default function CoffeeSelection() {
   const [openSections, setOpenSections] = useState<string[]>([]);
+  const navigate = useNavigate();
 
   const [selectedButtons, setSelectedButtons] = useState<{
     [key: string]: string;
   }>({});
+  const [open, setOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
@@ -52,6 +62,15 @@ export default function CoffeeSelection() {
       });
     }
   };
+  const deliveriesMap = {
+    "Every week": 14.99 * 4,
+    "Every 2 weeks": 14.99 * 2,
+    "Every month": 14.99,
+  } as const;
+
+  let preference = selectedButtons["Deliveries"] as keyof typeof deliveriesMap;
+  let price = deliveriesMap[preference] ?? 0;
+
   const handleSelect = (sectionId: string, option: string) => {
     setSelectedButtons((prevSelected) => ({
       ...prevSelected,
@@ -239,21 +258,65 @@ export default function CoffeeSelection() {
           <p> ORDER SUMMARY</p>
           <h1>
             “I drink my coffee using {!isGrindDisabled && "as "}
-            <span>{Preferences}</span>, with a <span>{Bean}</span> type of bean.&nbsp;
+            <span>{Preferences}</span>, with a <span>{Bean}</span> type of
+            bean.&nbsp;
             <span>{Quantity}</span>{" "}
             {!isGrindDisabled ? (
               <>
-                ground ala <span>{Grind}</span> ,&nbsp; 
+                ground ala <span>{Grind}</span> ,&nbsp;
               </>
-            ) : null}  sent to me <span>{Deliveries}</span> &nbsp;.”
+            ) : null}{" "}
+            sent to me <span>{Deliveries}</span> &nbsp;.”
           </h1>
         </div>
         <button
           className="conclusionButton"
           disabled={allKeysHaveValues(selectedButtons) ? false : true}
+          onClick={() => setOpen(true)}
         >
           Create my plan!
         </button>
+        {/* Modal Part */}
+        <Dialog
+          open={open}
+          onClose={() => setOpen(false)}
+          className="dialogModal"
+          sx={{ borderRadius: "10px" }}
+        >
+          <div className="dialogTitle">
+            <h1> Order Summary</h1>
+          </div>
+          <DialogContent>
+            <div className="dialogCenterText">
+              <h1>
+                “I drink my coffee using {!isGrindDisabled && "as "}
+                <span>{Preferences}</span>, with a <span>{Bean}</span> type of
+                bean.&nbsp;
+                <span>{Quantity}</span>{" "}
+                {!isGrindDisabled ? (
+                  <>
+                    ground ala <span>{Grind}</span> ,&nbsp;
+                  </>
+                ) : null}{" "}
+                sent to me <span>{Deliveries}</span> &nbsp;.”
+              </h1>
+              <p>
+                Is this correct? You can proceed to checkout or go back to plan
+                selection if something is off. Subscription discount codes can
+                also be redeemed at the checkout.
+              </p>
+            </div>
+          </DialogContent>
+          <DialogActions className="dialogAction">
+            <h1 className="dialogPrice">{price} / mo</h1>
+            <button
+              className="dialogCheckout-btn"
+              onClick={() => navigate("/")}
+            >
+              Checkout
+            </button>
+          </DialogActions>
+        </Dialog>
       </div>
     </div>
   );

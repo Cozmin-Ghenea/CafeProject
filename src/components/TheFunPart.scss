@@ -3,11 +3,20 @@ $DarkCyanClicked: rgb(102, 210, 207);
 $DarkGreyBlue: rgb(51, 61, 75);
 $PaleOrange: rgb(253, 214, 186);
 $LightCream: rgb(254, 252, 247);
+
 $Grey: rgb(131, 136, 143);
 $primary-color: #3498db;
 $Black: rgb(51, 61, 75);
 $lightGrey : rgb(244, 241, 235);
 
+
+button{
+  cursor:pointer;
+}
+button:hover{
+  background-color:$DarkCyanClicked;
+  border:none
+}
 .coffee-selection-container {
   display: flex;
   align-items: flex-start; 
@@ -191,9 +200,75 @@ $lightGrey : rgb(244, 241, 235);
     pointer-events: none;
     
   }
+// Modal part 
+
+.dialogTitle {
+  width: 100%;
+  height: auto;
+  background-image: url("assets/plan/desktop/bg-modal-top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  padding: 5% 0 ; 
+  text-align: left; 
+  padding-right:75px;
+  padding-left: 40px;
+  float:left;
+
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: left;
+  }
+
+  
+}
+
+.dialogCenterText{
+  h1{
+    color:$Grey;
+    font-size: 24px;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: left;
+  }
+    span{
+      color:$DarkCyan
+    }
+    p{
+      color: $Black;
+      font-size: 16px;
+      line-height: 26px;;
+      padding:0 10px;
+    }
+
+  }
+  .dialogAction{
+    float:left;
+    
+  }
+.dialogPrice{
+  font-size: 32px;
+  float:left;
+  line-height: 36px;
+  color: $Black;
+  width:100%;
+  padding:0 50px;
+  text-align: left;
+}
+
+.dialogCheckout-btn{
+ float:left;
+ margin-right: 25% ;
+}
 
 
 
+
+
+/// Responsivness
 
   @media (max-width: 768px) {
 
