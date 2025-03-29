@@ -1,0 +1,26 @@
+$DarkCyan: rgb(14, 135, 132);
+$DarkCyanClicked: rgb(102, 210, 207);
+$DarkGreyBlue: rgb(51, 61, 75);
+$PaleOrange: rgb(253, 214, 186);
+$LightCream: rgb(254, 252, 247);
+
+$Grey: rgb(131, 136, 143);
+$primary-color: #3498db;
+$Black: rgb(51, 61, 75);
+$lightGrey: rgb(244, 241, 235);
+
+.Register {
+  color: $Black;
+}
+
+.ButtonForm {
+  background-color: $DarkCyan !important;
+  &:hover {
+    background-color: $DarkCyanClicked !important;
+  }
+}
+
+.Redirect {
+  color: $Black;
+  margin: 20px 0;
+}

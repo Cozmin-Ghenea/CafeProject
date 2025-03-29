@@ -3,13 +3,7 @@ import "./TheFunPart.scss";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useNavigate } from "react-router-dom";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-} from "@mui/material";
+import { Dialog, DialogContent, DialogActions } from "@mui/material";
 
 export default function CoffeeSelection() {
   const [openSections, setOpenSections] = useState<string[]>([]);

@@ -1,9 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import { Bottom } from "../../components/Bottom";
 import { CoffeeWindow } from "../../components/CoffeeWindow";
 import { Menu } from "../../components/Menu";
 import "./Home.scss";
 
 export function Home() {
+  const navigate = useNavigate();
+  function createYourPlan() {
+    navigate("/CreateYourPlan");
+  }
+
   return (
     <div className="container">
       {/* ------ Menu side */}
@@ -18,7 +24,10 @@ export function Home() {
             curated artisan coffees from our best roasters delivered directly to
             your door, at your schedule.
           </p>
-          <button className="button "> Create your plan </button>
+          <button className="button " onClick={createYourPlan}>
+            {" "}
+            Create your plan{" "}
+          </button>
         </div>
       </div>
 
@@ -160,7 +169,9 @@ export function Home() {
             </div>
           </div>
         </div>
-        <button className="button ">Create your plan</button>
+        <button className="button" onClick={createYourPlan}>
+          Create your plan
+        </button>
       </div>
 
       <Bottom />

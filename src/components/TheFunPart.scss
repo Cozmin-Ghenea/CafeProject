@@ -7,20 +7,19 @@ $LightCream: rgb(254, 252, 247);
 $Grey: rgb(131, 136, 143);
 $primary-color: #3498db;
 $Black: rgb(51, 61, 75);
-$lightGrey : rgb(244, 241, 235);
+$lightGrey: rgb(244, 241, 235);
 
-
-button{
-  cursor:pointer;
+button {
+  cursor: pointer;
 }
-button:hover{
-  background-color:$DarkCyanClicked;
-  border:none
+button:hover {
+  background-color: $DarkCyanClicked;
+  border: none;
 }
 .coffee-selection-container {
   display: flex;
-  align-items: flex-start; 
-  gap: 20px; 
+  align-items: flex-start;
+  gap: 20px;
   padding: 20px;
 }
 
@@ -28,11 +27,11 @@ button:hover{
   width: 25%;
   padding: 20px;
   transition: all 0.3s;
-  position: relative; 
+  position: relative;
 
   &.sticky {
     position: sticky;
-    top: 10px; 
+    top: 10px;
   }
 
   span {
@@ -53,7 +52,7 @@ button:hover{
     padding: 5% 0;
     text-align: left;
     font-size: 24px;
-    cursor:pointer;
+    cursor: pointer;
   }
 }
 
@@ -73,74 +72,75 @@ button:hover{
     margin-bottom: 20px;
 
     .title-container {
-        display: flex;
-        align-items: center;  
-        justify-content: space-between; 
-        cursor: pointer;
-        width: 100%; 
-      }
-      
-      .title-container h1 {
-        margin: 30px 0 ;
-        font-size: 40px; 
-      }
-      
-      .title-container svg {
-        margin-left: 8px; 
-        width:20px;
-        height: 20px;
-        color:$DarkCyan;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .title-container h1 {
+      margin: 30px 0;
+      font-size: 40px;
+    }
+
+    .title-container svg {
+      margin-left: 8px;
+      width: 20px;
+      height: 20px;
+      color: $DarkCyan;
     }
     .options {
-        display: flex !important;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        transition: all 0.3s;
-      
-        &.hide {
-          display: none!important;
-        }
-        &.show {
-          display: flex!important;
-        }
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      transition: all 0.3s;
+
+      &.hide {
+        display: none !important;
       }
-    .bigger-text{
-        font-size: 24px;
-        text-align: left;
-        padding-bottom: 10px;
-        color:$Black;
-        margin-top:-50px 
-        
+      &.show {
+        display: flex !important;
+      }
     }
-    .small-text{
-        font-size: 16px;
-        text-align: left;
-        color:$Black
+    .bigger-text {
+      font-size: 24px;
+      text-align: left;
+      padding-bottom: 10px;
+      color: $Black;
+      margin-top: -50px;
+    }
+    .small-text {
+      font-size: 16px;
+      text-align: left;
+      color: $Black;
     }
     .option-button {
       display: inline-block;
       width: 30%;
-      height:250px;
+      height: 250px;
       padding: 23px;
       margin: 50px 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
       background: $lightGrey;
-      color:$Black;
-      transition: background 0.3s, color 0.3s;
-        &:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-          }
+      color: $Black;
+      transition:
+        background 0.3s,
+        color 0.3s;
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
       &:hover {
         background: $PaleOrange;
         color: $Black;
 
-        .bigger-text{
-            color: $Black;
+        .bigger-text {
+          color: $Black;
         }
-        .small-text{
-            color:$Black
+        .small-text {
+          color: $Black;
         }
       }
 
@@ -148,59 +148,53 @@ button:hover{
         background: $DarkCyan;
         color: white;
 
-        .bigger-text{
-            color: white;
+        .bigger-text {
+          color: white;
         }
-        .small-text{
-            color:white
+        .small-text {
+          color: white;
         }
       }
     }
-    
   }
 
-  .conclusion{
+  .conclusion {
     background-image: url("assets/plan/desktop/bg-order-summary.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
-    
 
-    p{
+    p {
       opacity: 0.5;
       padding: 5% 0 0 10%;
     }
-    h1{
-      color:white;
+    h1 {
+      color: white;
       font-size: 24px;
       padding: 0px 20% 5% 10%;
       line-height: 40px;
     }
-      span{
-        color:$DarkCyan
-      }
-
+    span {
+      color: $DarkCyan;
+    }
   }
 
-
-  .conclusionButton{
+  .conclusionButton {
     float: right;
     margin-top: 5%;
   }
-  .conclusionButton[disabled]{
-    background-color:$Grey;
-    cursor:not-allowed;
+  .conclusionButton[disabled] {
+    background-color: $Grey;
+    cursor: not-allowed;
     opacity: 0.5;
   }
-
 }
 .disabled {
-    opacity: 0.5;
-    pointer-events: none;
-    
-  }
-// Modal part 
+  opacity: 0.5;
+  pointer-events: none;
+}
+// Modal part
 
 .dialogTitle {
   width: 100%;
@@ -208,138 +202,123 @@ button:hover{
   background-image: url("assets/plan/desktop/bg-modal-top.png");
   background-repeat: no-repeat;
   background-size: cover;
-  white-space: nowrap; 
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
-  padding: 5% 0 ; 
-  text-align: left; 
-  padding-right:75px;
+  text-overflow: ellipsis;
+  padding: 5% 0;
+  text-align: left;
+  padding-right: 75px;
   padding-left: 40px;
-  float:left;
+  float: left;
 
   h1 {
     font-size: 40px;
     line-height: 48px;
     text-align: left;
   }
-
-  
 }
 
-.dialogCenterText{
-  h1{
-    color:$Grey;
+.dialogCenterText {
+  h1 {
+    color: $Grey;
     font-size: 24px;
     padding: 0 10px;
     line-height: 40px;
     text-align: left;
   }
-    span{
-      color:$DarkCyan
-    }
-    p{
-      color: $Black;
-      font-size: 16px;
-      line-height: 26px;;
-      padding:0 10px;
-    }
-
+  span {
+    color: $DarkCyan;
   }
-  .dialogAction{
-    float:left;
-    
+  p {
+    color: $Black;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0 10px;
   }
-.dialogPrice{
+}
+.dialogAction {
+  float: left;
+}
+.dialogPrice {
   font-size: 32px;
-  float:left;
+  float: left;
   line-height: 36px;
   color: $Black;
-  width:100%;
-  padding:0 50px;
+  width: 100%;
+  padding: 0 50px;
   text-align: left;
 }
 
-.dialogCheckout-btn{
- float:left;
- margin-right: 25% ;
+.dialogCheckout-btn {
+  float: left;
+  margin-right: 25%;
 }
-
-
-
-
 
 /// Responsivness
 
-  @media (max-width: 768px) {
-
-   
-    .leftSideHardPart {
-      display:none
-    }
-
-    .rightSideHardPart{
-      width:100%;
-      
-      .section{ 
-        .options:last-child {
-          margin-bottom: 100px;
-        }
-        .option-button {
-        width:100%;
-        height:auto;
-        margin: 10px 0
-      }
-      .bigger-text{
-        margin:0;
-        
-      }
-
-      .title-container h1{
-        font-size: 24px;;
-      }
-      }
-
-      .conclusion h1{
-        padding:0 30px 30px 30px;
-       }
-
-       .conclusionButton{
-        transform: translateX(70%);
-        float:none;
-        margin:10% 0;
-       }
-    }
-  }
-  @media(min-width: 769px) and (max-width: 1000px)  {
-    
-    .coffee-selection-container{
-      padding:20px 0;
-    }
-    
-    .leftSideHardPart {
-      display:none;
-    }
-
-    
-    .rightSideHardPart{
-     padding:0;
-
-     .section{
-      width:100%;
-
-      .option-button{
-        margin:50px 5px;
-      }
-     }
-      .conclusionButton{
-        transform: translateX(140%);
-        margin-top: 5%;
-        float:none;
-       }
-     
-    }
+@media (max-width: 768px) {
+  .leftSideHardPart {
+    display: none;
   }
 
-  @media(min-width: 1001px) and (max-width: 1200px)  {
-    
+  .rightSideHardPart {
+    width: 100%;
+
+    .section {
+      .options:last-child {
+        margin-bottom: 100px;
+      }
+      .option-button {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+      }
+      .bigger-text {
+        margin: 0;
+      }
+
+      .title-container h1 {
+        font-size: 24px;
+      }
+    }
+
+    .conclusion h1 {
+      padding: 0 30px 30px 30px;
+    }
+
+    .conclusionButton {
+      transform: translateX(70%);
+      float: none;
+      margin: 10% 0;
+    }
   }
+}
+@media (min-width: 769px) and (max-width: 1000px) {
+  .coffee-selection-container {
+    padding: 20px 0;
+  }
+
+  .leftSideHardPart {
+    display: none;
+  }
+
+  .rightSideHardPart {
+    padding: 0;
+
+    .section {
+      width: 100%;
+
+      .option-button {
+        margin: 50px 5px;
+      }
+    }
+    .conclusionButton {
+      transform: translateX(140%);
+      margin-top: 5%;
+      float: none;
+    }
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+}
