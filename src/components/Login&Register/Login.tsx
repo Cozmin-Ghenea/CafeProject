@@ -19,9 +19,22 @@ export function Login() {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
+  
+//  keep it just in case
+
+  function decodeBase64(encodedStr:string ) {
+    return new TextDecoder().decode(Uint8Array.from(atob(encodedStr), c => c.charCodeAt(0)));
+  }
+  
+  function encodeBase64(str: string) {
+    return btoa(String.fromCharCode(...new TextEncoder().encode(str)));
+  }
+
 
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
+
+
     const activeUser = users.find(
       (user: { isActive: boolean }) => user.isActive,
     );
@@ -29,12 +42,12 @@ export function Login() {
       navigate("/");
     }
   }, [navigate]);
-
+  const encodedPassword = encodeBase64(password)
   const handleLogin = () => {
     let users = JSON.parse(localStorage.getItem("users") || "[]");
     const userIndex = users.findIndex(
       (u: { email: string; password: string }) =>
-        u.email === email && u.password === password,
+        u.email === email && u.password === encodedPassword,
     );
 
     if (userIndex !== -1) {

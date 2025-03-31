@@ -25,7 +25,10 @@ export function Register() {
   const validateEmail = (email: string) => /.+@.+\..+/.test(email);
 
   const navigate = useNavigate();
-
+  function encodeBase64(str: string) {
+    return btoa(String.fromCharCode(...new TextEncoder().encode(str)));
+  }
+  
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
     const activeUser = users.find(
@@ -35,7 +38,6 @@ export function Register() {
       navigate("/");
     }
   }, [navigate]);
-
   const handleRegister = () => {
     let valid = true;
     if (!validateEmail(email)) {
@@ -62,11 +64,12 @@ export function Register() {
     } else {
       setConfirmPasswordError("");
     }
-
+    
     if (valid) {
+      const encodedPassword = encodeBase64(password); 
       const newUser = {
         email,
-        password,
+        password: encodedPassword,
         name,
         isActive: true,
       };
