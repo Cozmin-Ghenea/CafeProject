@@ -22,7 +22,7 @@ export function Bottom() {
         </div>
         <div className="logoText">coffeeroasters</div>
       </div>
-      <div className="tags">
+      <div className="tagsBottom">
         <Link to="/">Home </Link>
         <Link to="/AboutUs">About Us</Link>
         <Link to="/CreateYourPlan">Create Your plan</Link>

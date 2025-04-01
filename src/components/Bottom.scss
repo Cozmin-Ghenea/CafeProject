@@ -57,24 +57,23 @@ $PaleOrange: rgb(253, 214, 186);
     font-family: "Fraunces", serif;
   }
 
-  .tags {
+  .tagsBottom {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 40px;
     font-family: "Barlow", serif;
-  }
-
-  .tags a {
+    a {
     font-weight: 600;
     color: rgb(131, 136, 143);
     font-size: 16px;
     transition: color 0.3s ease;
-  }
 
-  .tags a:hover {
+  &:hover {
     color: white;
   }
+    }
+}
 
   .socials {
     display: flex;

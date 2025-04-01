@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 
 export function Menu() {
   const [activeUserName, setActiveUserName] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function capitalizeFirstLetter(str: string) {
-    if (!str) return str; //
+    if (!str) return str;
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   }
+
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
     const activeUser = users.find(
@@ -23,7 +25,6 @@ export function Menu() {
     let users = JSON.parse(localStorage.getItem("users") || "[]");
     users = users.map((user: any) => ({ ...user, isActive: false }));
     localStorage.setItem("users", JSON.stringify(users));
-
     setActiveUserName("");
   };
 
@@ -44,7 +45,15 @@ export function Menu() {
         </div>
         <div className="logoText">coffeeroasters</div>
       </div>
-      <div className="tags">
+
+      {/*  hamburger button */}
+      <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div className={`tags ${isMenuOpen ? "active" : ""}`}>
         {!activeUserName ? (
           <Link to="/Login">Login</Link>
         ) : (
@@ -57,9 +66,9 @@ export function Menu() {
             </button>
           </>
         )}
-        <Link to="/">Home </Link>
+        <Link to="/">Home</Link>
         <Link to="/AboutUs">About Us</Link>
-        <Link to="/CreateYourPlan">Create Your plan</Link>
+        <Link to="/CreateYourPlan">Create Your Plan</Link>
       </div>
     </div>
   );
