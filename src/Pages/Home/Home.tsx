@@ -83,11 +83,13 @@ export function Home() {
               />
             </svg>
           </div>
-          <h1>Best quality</h1>
-          <p>
-            Discover an endless variety of the world’s best artisan coffee from
-            each of our roasters.
-          </p>
+          <div className="text-content">
+            <h1>Best quality</h1>
+            <p>
+              Discover an endless variety of the world’s best artisan coffee
+              from each of our roasters.
+            </p>
+          </div>
         </div>
         <div className="CardModel col-lg-3 col-md-3 col-sm-12 col-xs-12">
           <div className="SvgImage">
@@ -98,11 +100,13 @@ export function Home() {
               />
             </svg>
           </div>
-          <h1>Exclusive benefits</h1>
-          <p>
-            Special offers and swag when you subscribe, including 30% off your
-            first shipment.
-          </p>
+          <div className="text-content">
+            <h1>Exclusive benefits</h1>
+            <p>
+              Special offers and swag when you subscribe, including 30% off your
+              first shipment.
+            </p>
+          </div>
         </div>
         <div className="CardModel col-lg-3 col-md-3 col-sm-12 col-xs-12">
           <div className="SvgImage">
@@ -113,11 +117,13 @@ export function Home() {
               />
             </svg>
           </div>
-          <h1>Free shipping</h1>
-          <p>
-            We cover the cost and coffee is delivered fast. Peak freshness:
-            guaranteed.
-          </p>
+          <div className="text-content">
+            <h1>Free shipping</h1>
+            <p>
+              We cover the cost and coffee is delivered fast. Peak freshness:
+              guaranteed.
+            </p>
+          </div>
         </div>
       </div>
       {/* How IT works  */}
