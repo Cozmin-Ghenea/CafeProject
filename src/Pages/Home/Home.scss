@@ -359,4 +359,48 @@ p {
       display: none;
     }
   }
+
+  /// Why choose us
+.ChooseUs {
+    h1,p{
+      width:90%;
+      margin: 10% 5%;
+      text-align: center;;
+    }
+
+    h1{
+      padding-top: 20%;
+      font-size:28px;
+      line-height: 28px;
+    }
+    p{
+      font-size: 15px;
+      letter-spacing: 0px;
+      line-height: 25px;
+      opacity: 0.8;
+    }
+  }
+  .CardContainer{
+    .CardModel{
+      margin: 5% 0;
+      &:first-child{
+        margin:0;
+      }
+      &:last-child{
+        margin-bottom: 15%;
+      }
+    }
+
+    .SvgImage{
+      margin: 60px auto 40px
+    }
+    h1{
+      font-size: 24px;
+      line-height: 32px;
+    }
+    p{
+      font-size: 15px;
+      padding:15%;
+    }
+  }
 }
