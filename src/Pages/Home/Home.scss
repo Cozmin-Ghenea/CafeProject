@@ -63,6 +63,9 @@ p {
   }
 }
 
+/// Coffee Section
+
+
 .Coffe-Section {
   display: flex;
   flex-direction: row;
@@ -267,6 +270,7 @@ p {
   .descriptionSection {
     height: auto;
     position: relative;
+    margin:0 5px;
   
     &::before {
       content: "";
@@ -296,13 +300,56 @@ p {
     }
   }
   
+
+
+
+// Coffee Section
+
+.Coffe-Section{
+  margin-top: 20rem;
+  .BackTitle{
+    width:100%;
+    font-size:50px ;
+    line-height: 72px;
+    background: linear-gradient(180.00deg, rgba(254, 252, 247, .2),rgb(254, 252, 247) 10%);
+    transform: translateX(-50%);
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(254, 252, 247, 1),
+      rgba(254, 252, 247, 0.1)
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(254, 252, 247, 1),
+      rgba(254, 252, 247, 0.3)
+    );
+    color: rgba(131, 136, 143, 0.55);
+    top:-8rem;
+  }
+
+  margin-bottom: 10px;
+
+  
+}
+
+
+
   // HowItWorks Segment
   .HowItWorksSegment {
     width: 100%;
     padding: 0;
     text-align: center;
     align-items: center;
+    margin:5% 3% 40% 3%;
 
+
+
+    .subscription-steps {
+      padding: 0 20px 60px 10px;
+      color: white;
+      border-radius: 4px;
+      position: relative;
+    }
     .forMobile {
       width: 100%;
       text-align: center;
@@ -386,9 +433,74 @@ p {
       padding:15%;
     }
   }
+
+
+  
+  // HowItWorks Segment
+  .HowItWorksSegment {
+
+    .step {  
+    .bigTitle{
+      margin-top:30%;
+    }
+    .step:first-child .bigTitle{
+      margin-top:0;
+    }
+    
+    }
+
+    
+  }
+  
+
+
+
 }
 @media (min-width: 769px) and (max-width: 1000px) {
 
+  // Our Coffe
+
+  .Coffee-window  {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    text-align: left;
+    gap: 20px; 
+    max-width: 100%;
+    margin:2%;
+    .Coffee-description{
+      max-width: 70%;;
+    }
+    .Coffee-image {
+      flex-shrink: 0;
+      margin-left: 10%;
+    }
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      flex: 1; 
+
+      h1 {
+        font-size: 24px;
+        margin: 0; 
+        text-align: left;
+      }
+
+      p {
+        font-size: 15px;
+        margin-top: 30px; 
+        opacity: 0.8;
+        text-align: left;
+        width:100%;
+      }
+    }
+  }
+
+
+
+  //  Why Choose us
   .ChooseUs{
     h1,p{
       width:70%;

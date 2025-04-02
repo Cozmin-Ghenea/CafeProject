@@ -10,6 +10,29 @@ export function Home() {
     navigate("/CreateYourPlan");
   }
 
+  const coffeeData = [
+    {
+      image: "assets/home/desktop/image-gran-espresso.png",
+      title: "Gran Espresso",
+      desc: "Light and flavorful blend with cocoa and black pepper for an intense experience",
+    },
+    {
+      image: "assets/home/desktop/image-planalto.png",
+      title: "Planalto",
+      desc: "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts",
+    },
+    {
+      image: "assets/home/desktop/image-piccollo.png",
+      title: "Piccollo",
+      desc: "Mild and smooth blend featuring notes of toasted almond and dried cherry",
+    },
+    {
+      image: "assets/home/desktop/image-danche.png",
+      title: "Danche",
+      desc: "Ethiopian hand-harvested blend densely packed with vibrant fruit notes",
+    },
+  ];
+
   return (
     <div className="container">
       {/* ------ Menu side */}
@@ -37,30 +60,15 @@ export function Home() {
           <div className="col-lg-12 col-md-12 col-xs-12">
             <h1 className="BackTitle">Our Collection</h1>
           </div>
-          <CoffeeWindow
-            className="Coffee-window col-lg-3 col-md-3 col-xs-1"
-            image="assets/home/desktop/image-gran-espresso.png"
-            title="Gran Espresso"
-            desc="Light and flavorful blend with cocoa and black pepper for an intense experience"
-          ></CoffeeWindow>
-          <CoffeeWindow
-            className=" Coffee-window col-lg-3 col-md-3 col-xs-1"
-            image="assets/home/desktop/image-planalto.png"
-            title="Planalto"
-            desc="Brazilian dark roast with rich and velvety body, and hints of fruits and nuts"
-          ></CoffeeWindow>
-          <CoffeeWindow
-            className="Coffee-window col-lg-3 col-md-3 col-xs-1"
-            image="assets/home/desktop/image-piccollo.png"
-            title="Piccollo"
-            desc="Mild and smooth blend featuring notes of toasted almond and dried cherry"
-          ></CoffeeWindow>
-          <CoffeeWindow
-            className=" Coffee-window col-lg-3 col-md-3 col-xs-1"
-            image="assets/home/desktop/image-danche.png"
-            title="Danche"
-            desc="Ethiopian hand-harvested blend densely packed with vibrant fruit notes"
-          ></CoffeeWindow>
+          {coffeeData.map((coffee, index) => (
+            <CoffeeWindow
+              key={index}
+              className="Coffee-window col-lg-3 col-md-3 col-xs-12"
+              image={coffee.image}
+              title={coffee.title}
+              desc={coffee.desc}
+            />
+          ))}
         </div>
       </div>
 
@@ -180,7 +188,7 @@ export function Home() {
         </button>
       </div>
 
-      {/* <Bottom /> */}
+      <Bottom />
     </div>
   );
 }
