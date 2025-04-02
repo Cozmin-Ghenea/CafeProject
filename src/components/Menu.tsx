@@ -47,7 +47,10 @@ export function Menu() {
       </div>
 
       {/*  hamburger button */}
-      <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      <div
+        className={`hamburger ${isMenuOpen ? "active" : ""}`}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
         <div></div>
         <div></div>
         <div></div>

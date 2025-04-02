@@ -180,7 +180,7 @@ export function Home() {
         </button>
       </div>
 
-      <Bottom />
+      {/* <Bottom /> */}
     </div>
   );
 }

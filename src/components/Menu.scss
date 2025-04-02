@@ -38,7 +38,6 @@ $DarkCyan: rgb(14, 135, 132);
   z-index: 0;
   pointer-events: none;
   background-color: white;
-  fill: aqua;
 }
 
 .secondBean {
@@ -52,7 +51,6 @@ $DarkCyan: rgb(14, 135, 132);
   pointer-events: none;
   border-radius: 100%;
   background-color: white;
-  fill: aqua;
 }
 
 .logoText {
@@ -77,6 +75,7 @@ $DarkCyan: rgb(14, 135, 132);
     padding: 0;
     margin: 0;
   }
+
   span {
     color: $DarkCyan;
   }
@@ -102,6 +101,7 @@ $DarkCyan: rgb(14, 135, 132);
     color: rgb(131, 136, 143);
     font-size: 16px;
     transition: color 0.3s ease;
+
     &:hover {
       color: $Black;
     }
@@ -109,133 +109,77 @@ $DarkCyan: rgb(14, 135, 132);
 }
 
 .hamburger {
-  display: none; 
+  display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
   width: 30px;
   height: 25px;
   position: relative;
-
-
-
-  &.active div:first-child {
-    transform: rotate(45deg);
-    top: 0;
-  }
-
-  &.active div:nth-child(2) {
-    opacity: 0; 
-  }
-
-  &.active div:last-child {
-    transform: rotate(-45deg);
-    bottom: 0; 
-  }
-
+  
   div {
-    position: relative;
     width: 100%;
     height: 4px;
     background-color: $Black;
     transition: all 0.3s ease-in-out;
   }
-}
 
-@media (max-width: 768px) {
+    &.active div:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 6px);;
+      width:80%
+    }
 
-  .menu{
-    transition: background-color 0.3s ease;
-  }
-  .tags {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(
-      0deg,
-      rgba(254, 252, 247, 0.2),
-      rgb(254, 252, 247) 30%
-    );
-    padding: 20px;
-    height:auto;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-    z-index:4;
-     transition: all 0.3s ease-in-out;
-    &.active {
-    display: flex;
-    
-  }
-  a, p, button{
-    font-size: 24px;
-    line-height: 32px;
-    color:$Black;
-    padding:3%
-  }
+    &.active div:nth-child(2) {
+      opacity: 0;
+    }
 
-  }
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-    
-
-    div{
-      background-color:$Black;
+    &.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+      width:80%
     }
   }
 
-  .Menu {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  @media (max-width: 768px) {
+    .tags {
+      display: flex; 
+      flex-direction: column; 
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(0deg, rgba(254, 252, 247, 0.2), rgb(254, 252, 247) 30%);
+      padding: 20px;
+      text-align: center;
+      z-index: 4;
+  
+    
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  
+      &.active {
+        max-height: 60vh; 
+        opacity: 1;
+        visibility: visible;
+      }
+  
+      a,
+      p,
+      button {
+        font-size: 24px;
+        line-height: 32px;
+        color: $Black;
+        padding: 10px 0;
+      }
+  
+      a:last-child {
+        margin-bottom: 30%;
+      }
+    }
+  
+    .hamburger {
+      display: flex; 
+    }
   }
-
-
-  .hamburger {
-    display: flex; 
-
-  div {
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background: $Black;
-    transition: all 0.3s ease-in-out;
-  }
-
-  div:nth-child(1) {
-    top: 0;
-  }
-
-  div:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  div:nth-child(3) {
-    bottom: 0;
-  }
-}
-
-.hamburger.active div:nth-child(1) {
-  transform: rotate(45deg);
-  top: 50%;
-}
-
-.hamburger.active div:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active div:nth-child(3) {
-  transform: rotate(-45deg);
-  bottom: 50%;
-}
-}
