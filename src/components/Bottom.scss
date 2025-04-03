@@ -80,7 +80,10 @@ $PaleOrange: rgb(253, 214, 186);
     display: flex;
     gap: 20px;
     color: white;
-
+    svg {
+      width: 25px;
+      height: 25px;
+    }
     a {
       color: white;
       transition: color 0.3s ease;
@@ -90,13 +93,13 @@ $PaleOrange: rgb(253, 214, 186);
     }
   }
 }
-  @media (max-width: 768px) {
-    .bottom{
+@media (max-width: 768px) {
+  .bottom {
     flex-direction: column;
     height: auto;
     padding: 20px 5%;
     text-align: center;
-  .tagsBottom{
+    .tagsBottom {
       flex-direction: column;
       align-items: center;
       gap: 30px;
@@ -106,49 +109,43 @@ $PaleOrange: rgb(253, 214, 186);
       line-height: 15px;
     }
 
-    .Logo{
+    .Logo {
       padding: 5% 10%;
     }
-    .socials{
+    .socials {
       padding: 15%;
-      svg{
-        width:30px;
-        height:30px;
+      svg {
+        width: 30px;
+        height: 30px;
       }
-    
     }
   }
-
 }
-@media (min-width: 768px) and (max-width:1000px) {
-  .bottom{
-  flex-direction: column;
-  height: auto;
-  padding: 20px 5%;
-  text-align: center;
-.tagsBottom{
-    align-items: center;
+@media (min-width: 768px) and (max-width: 1000px) {
+  .bottom {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 5%;
     text-align: center;
-    align-items: center;
+    .tagsBottom {
+      align-items: center;
+      text-align: center;
+      align-items: center;
 
-    font-size: 12px;
-    letter-spacing: 0.92px;
-    line-height: 15px;
-
-
-  }
-
-  .Logo{
-    padding: 5% 10%;
-  }
-  .socials{
-    padding: 15%;
-    svg{
-      width:30px;
-      height:30px;
+      font-size: 12px;
+      letter-spacing: 0.92px;
+      line-height: 15px;
     }
-  
-  }
-}
 
+    .Logo {
+      padding: 5% 10%;
+    }
+    .socials {
+      padding: 15%;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
 }

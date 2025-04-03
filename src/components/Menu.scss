@@ -147,12 +147,10 @@ $DarkCyan: rgb(14, 135, 132);
       top: 60px;
       left: 0;
       width: 100%;
-      background: linear-gradient(0deg, rgba(254, 252, 247, 0.2), rgb(254, 252, 247) 30%);
+      background: linear-gradient(0deg, rgba(254, 252, 247, 0.1), rgb(254, 252, 247) 30%);
       padding: 20px;
       text-align: center;
-      z-index: 4;
-  
-    
+      z-index: 4; 
       max-height: 0;
       opacity: 0;
       visibility: hidden;
@@ -175,7 +173,7 @@ $DarkCyan: rgb(14, 135, 132);
       }
   
       a:last-child {
-        margin-bottom: 30%;
+        margin-bottom: 50%;
       }
     }
   

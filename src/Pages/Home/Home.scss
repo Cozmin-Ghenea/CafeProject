@@ -460,6 +460,16 @@ p {
 
   // Our Coffe
 
+ 
+.Coffe-Section{
+  .row{
+    margin-top: 200px;;
+  }
+  .BackTitle{
+    top:-25rem;
+    line-height: 150px;
+  }
+}
   .Coffee-window  {
     display: flex;
     flex-direction: row; 

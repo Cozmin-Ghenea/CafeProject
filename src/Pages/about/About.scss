@@ -66,14 +66,14 @@ p {
   margin: 10% auto;
 
   .leftSide {
-    margin-left: 10%;
+    margin-left: 5%;
     img {
       border-radius: 10px;
     }
   }
   .rightSide {
     text-align: left;
-    margin-right: 10%;
+    margin-right: 5%;
     margin-top: 5%;
   }
 
@@ -84,6 +84,7 @@ p {
   }
   p {
     color: $Black;
+    opacity: 0.8;
   }
 }
 
@@ -91,21 +92,28 @@ p {
 
 .Uncomp {
   display: flex;
+  flex-direction: row-reverse;
   gap: 10%;
   justify-content: center;
   margin: 20% auto;
-  background-color: $Black;
+  background-image: url("assets/about/desktop/bg-quality.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   border-radius: 10px;
   position: relative;
 
   .leftSide {
     text-align: left;
+    flex: 1;
     margin-left: 5%;
-    margin-top: 7%;
+    margin-top: 5%;
+    margin-bottom: 12%;
   }
 
   h1 {
-    padding-bottom: 10%;
+    padding-bottom: 5%;
     text-align: left;
     font-size: 40px;
     line-height: 48px;
@@ -114,16 +122,23 @@ p {
   p {
     line-height: 26px;
     text-align: left;
-    width: 80%;
+    width: 90%;
+    opacity: 0.8;
   }
   .rightSide {
     position: relative;
     display: flex;
-    img {
+    .img {
+      background-image: url("assets/about/desktop/image-quality.jpg");
       position: relative;
-      top: -20%;
-      right: 15%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       border-radius: 10px;
+      top: -75px;
+      left: -50px;
+      width: 450px;
+      height: 450px;
     }
   }
 }
@@ -158,6 +173,7 @@ p {
     font-weight: 400;
     line-height: 26px;
     width: 70%;
+    opacity: 0.8;
   }
   .container-wrapper {
     display: flex;
@@ -180,7 +196,7 @@ p {
 @media (max-width: 768px) {
   // First part
   .descriptionSectionAboutUs {
-    height: 35rem;
+    height: 40rem;
     position: relative;
 
     &:before {
@@ -197,16 +213,18 @@ p {
     h1 {
       font-size: 28px;
       text-align: center;
-      padding-top: 5%;
+      padding-top: 15%;
       z-index: 2;
       width: 100%;
     }
     p {
       text-align: center;
       width: 100%;
-      font-size: 15px;
+      font-size: 17px;
+      line-height: 25px;
+      padding: 3% 8%;
       z-index: 2;
-      font-size: 15px;
+      opacity: 0.8;
       text-align: center;
     }
     .button {
@@ -216,6 +234,152 @@ p {
       height: 75px;
       font-size: 18px;
       margin: 20% 20%;
+    }
+  }
+  .OurComm {
+    display: flex;
+    flex-direction: column;
+    .leftSide {
+      margin: 10% 0;
+      padding-top: 10%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .rightSide {
+      margin-right: 0;
+      h1 {
+        text-align: center;
+        font-size: 32px;
+        line-height: 48px;
+      }
+      p {
+        opacity: 0.8;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        margin: 0 5%;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .Uncomp {
+    display: block;
+    margin-top: 50%;
+    padding-bottom: 20%;
+    .leftSide {
+      margin: 0;
+      margin-top: -60px;
+      padding: 0 10%;
+      h1 {
+        font-size: 28px;
+        line-height: 28px;
+        text-align: center;
+      }
+      p {
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .rightSide {
+      .img {
+        background-image: url("assets/about/mobile/image-quality.jpg");
+        width: 85%;
+        height: 200px;
+        top: -100px;
+        left: 7%;
+      }
+    }
+  }
+
+  // OurHeadquarters Mobile
+
+  .Ourheadquarters {
+    margin-bottom: 30%;
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    .container-wrapper {
+      flex-direction: column;
+      .container {
+        width: 100%;
+        align-items: center;
+      }
+    }
+
+    .smallerTitle {
+      font-size: 28px;
+      line-height: 36px;
+      text-align: center;
+    }
+
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+@media (min-width: 769px) and (max-width: 1000px) {
+  //  OuR Comp
+
+  .OurComm {
+    .leftSide {
+      margin-left: 0;
+      img {
+        width: 300px;
+        height: 400px;
+      }
+    }
+    .rightSide {
+      margin-top: 0;
+      margin-right: 0;
+      h1 {
+        font-size: 32px;
+        line-height: 48px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 25px;
+      }
+    }
+  }
+  .Uncomp {
+    display: block;
+    margin-top: 50%;
+    padding-bottom: 10%;
+    .leftSide {
+      margin: 0;
+      margin-top: -100px;
+      padding: 0 10%;
+      h1 {
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+      }
+      p {
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .rightSide {
+      .img {
+        background-image: url("assets/about/tablet/image-quality.jpg");
+        width: 85%;
+        height: 350px;
+        top: -150px;
+        left: 7%;
+      }
     }
   }
 }

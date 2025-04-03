@@ -257,12 +257,16 @@ button:hover {
 /// Responsivness
 
 @media (max-width: 768px) {
+  .coffee-selection-container {
+    padding: 5px;
+  }
   .leftSideHardPart {
     display: none;
   }
 
   .rightSideHardPart {
     width: 100%;
+    padding: 0;
 
     .section {
       .options:last-child {
@@ -284,13 +288,41 @@ button:hover {
 
     .conclusion h1 {
       padding: 0 30px 30px 30px;
+      font-size: 24px;
+      line-height: 40px;
     }
 
     .conclusionButton {
-      transform: translateX(70%);
       float: none;
-      margin: 10% 0;
+      margin: 10% 20%;
     }
+  }
+
+  .dialogTitle {
+    h1 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+  .dialogCenterText {
+    h1 {
+      font-size: 24px;
+      line-height: 40px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+  .dialogPrice {
+    display: none;
+  }
+  .dialogCheckout-btn {
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 @media (min-width: 769px) and (max-width: 1000px) {
@@ -318,7 +350,4 @@ button:hover {
       float: none;
     }
   }
-}
-
-@media (min-width: 1001px) and (max-width: 1200px) {
 }

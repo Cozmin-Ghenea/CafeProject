@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { useNavigate } from "react-router-dom";
 import "./Menu.scss";
 import { useEffect, useState } from "react";
 
@@ -10,6 +11,7 @@ export function Menu() {
     if (!str) return str;
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   }
+  const navigate = useNavigate();
 
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem("users") || "[]");

@@ -4,6 +4,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useNavigate } from "react-router-dom";
 import { Dialog, DialogContent, DialogActions } from "@mui/material";
+import { useMediaQuery } from "react-responsive";
 
 export default function CoffeeSelection() {
   const [openSections, setOpenSections] = useState<string[]>([]);
@@ -15,6 +16,7 @@ export default function CoffeeSelection() {
   const [open, setOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   function allKeysHaveValues(obj: { [key: string]: string }): boolean {
     const hasAllValues = Object.values(obj).every((value) => value !== "");
@@ -302,12 +304,12 @@ export default function CoffeeSelection() {
             </div>
           </DialogContent>
           <DialogActions className="dialogAction">
-            <h1 className="dialogPrice">{price} / mo</h1>
+            <h1 className="dialogPrice"> {isMobile ? "" : `${price} / mo`}</h1>
             <button
               className="dialogCheckout-btn"
               onClick={() => navigate("/")}
             >
-              Checkout
+              {isMobile ? `Checkout - ${price} / mo` : `Checkout`}
             </button>
           </DialogActions>
         </Dialog>
