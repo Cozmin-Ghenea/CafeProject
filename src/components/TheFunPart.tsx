@@ -304,12 +304,15 @@ export default function CoffeeSelection() {
             </div>
           </DialogContent>
           <DialogActions className="dialogAction">
-            <h1 className="dialogPrice"> {isMobile ? "" : `${price} / mo`}</h1>
+            <h1 className="dialogPrice">
+              {" "}
+              {isMobile ? "" : `${price} $ / mo`}
+            </h1>
             <button
               className="dialogCheckout-btn"
               onClick={() => navigate("/")}
             >
-              {isMobile ? `Checkout - ${price} / mo` : `Checkout`}
+              {isMobile ? `Checkout - ${price} $/ mo` : `Checkout`}
             </button>
           </DialogActions>
         </Dialog>
