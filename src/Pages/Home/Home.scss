@@ -26,11 +26,11 @@ p {
 }
 .container {
   background-color: $LightCream;
-  max-width: 100vw;;
+  max-width: 100vw;
 }
 
 .descriptionSection {
-  background-image: url("assets/home/desktop/image-hero-coffeepress.jpg");
+  background-image: url("../..assets/home/desktop/image-hero-coffeepress.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -64,7 +64,6 @@ p {
 }
 
 /// Coffee Section
-
 
 .Coffe-Section {
   display: flex;
@@ -188,14 +187,13 @@ p {
     border-radius: 4px;
     position: relative;
 
-    .button{
-      border:none;
+    .button {
+      border: none;
 
-      &:hover{
-        border:none;
+      &:hover {
+        border: none;
       }
     }
-
   }
 
   .steps-row {
@@ -270,8 +268,8 @@ p {
   .descriptionSection {
     height: auto;
     position: relative;
-    margin:0 5px;
-  
+    margin: 0 5px;
+
     &::before {
       content: "";
       position: absolute;
@@ -282,57 +280,56 @@ p {
       z-index: 1;
       background-color: rgba(0, 0, 0, 0.5);
     }
-  
-    h1, p, button {
+
+    h1,
+    p,
+    button {
       position: relative;
       z-index: 2;
       width: 100%;
       text-align: center;
     }
-  
+
     h1 {
       font-size: 40px;
       margin-top: 20%;
     }
-  
+
     p {
-     opacity: .7;
+      opacity: 0.7;
     }
   }
-  
 
+  // Coffee Section
 
+  .Coffe-Section {
+    margin-top: 20rem;
+    .BackTitle {
+      width: 100%;
+      font-size: 50px;
+      line-height: 72px;
+      background: linear-gradient(
+        180deg,
+        rgba(254, 252, 247, 0.2),
+        rgb(254, 252, 247) 10%
+      );
+      transform: translateX(-50%);
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(254, 252, 247, 1),
+        rgba(254, 252, 247, 0.1)
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        rgba(254, 252, 247, 1),
+        rgba(254, 252, 247, 0.3)
+      );
+      color: rgba(131, 136, 143, 0.55);
+      top: -8rem;
+    }
 
-// Coffee Section
-
-.Coffe-Section{
-  margin-top: 20rem;
-  .BackTitle{
-    width:100%;
-    font-size:50px ;
-    line-height: 72px;
-    background: linear-gradient(180.00deg, rgba(254, 252, 247, .2),rgb(254, 252, 247) 10%);
-    transform: translateX(-50%);
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgba(254, 252, 247, 1),
-      rgba(254, 252, 247, 0.1)
-    );
-    mask-image: linear-gradient(
-      to bottom,
-      rgba(254, 252, 247, 1),
-      rgba(254, 252, 247, 0.3)
-    );
-    color: rgba(131, 136, 143, 0.55);
-    top:-8rem;
+    margin-bottom: 10px;
   }
-
-  margin-bottom: 10px;
-
-  
-}
-
-
 
   // HowItWorks Segment
   .HowItWorksSegment {
@@ -340,9 +337,7 @@ p {
     padding: 0;
     text-align: center;
     align-items: center;
-    margin:5% 3% 40% 3%;
-
-
+    margin: 5% 3% 40% 3%;
 
     .subscription-steps {
       padding: 0 20px 60px 10px;
@@ -391,95 +386,84 @@ p {
   }
 
   /// Why choose us
-.ChooseUs {
-    h1,p{
-      width:90%;
+  .ChooseUs {
+    h1,
+    p {
+      width: 90%;
       margin: 10% 5%;
-      text-align: center;;
+      text-align: center;
     }
 
-    h1{
+    h1 {
       padding-top: 20%;
-      font-size:28px;
+      font-size: 28px;
       line-height: 28px;
     }
-    p{
+    p {
       font-size: 15px;
       letter-spacing: 0px;
       line-height: 25px;
       opacity: 0.8;
     }
   }
-  .CardContainer{
-    .CardModel{
+  .CardContainer {
+    .CardModel {
       margin: 5% 0;
-      &:first-child{
-        margin:0;
+      &:first-child {
+        margin: 0;
       }
-      &:last-child{
+      &:last-child {
         margin-bottom: 15%;
       }
     }
 
-    .SvgImage{
-      margin: 60px auto 40px
+    .SvgImage {
+      margin: 60px auto 40px;
     }
-    h1{
+    h1 {
       font-size: 24px;
       line-height: 32px;
     }
-    p{
+    p {
       font-size: 15px;
-      padding:15%;
+      padding: 15%;
     }
   }
 
-
-  
   // HowItWorks Segment
   .HowItWorksSegment {
-
-    .step {  
-    .bigTitle{
-      margin-top:30%;
+    .step {
+      .bigTitle {
+        margin-top: 30%;
+      }
+      .step:first-child .bigTitle {
+        margin-top: 0;
+      }
     }
-    .step:first-child .bigTitle{
-      margin-top:0;
-    }
-    
-    }
-
-    
   }
-  
-
-
-
 }
 @media (min-width: 769px) and (max-width: 1000px) {
-
   // Our Coffe
 
- 
-.Coffe-Section{
-  .row{
-    margin-top: 200px;;
+  .Coffe-Section {
+    .row {
+      margin-top: 200px;
+    }
+    .BackTitle {
+      top: -25rem;
+      line-height: 150px;
+    }
   }
-  .BackTitle{
-    top:-25rem;
-    line-height: 150px;
-  }
-}
-  .Coffee-window  {
+  .Coffee-window {
     display: flex;
-    flex-direction: row; 
-    align-items: center; 
+    flex-direction: row;
+    align-items: center;
     text-align: left;
-    gap: 20px; 
+    gap: 20px;
     max-width: 100%;
-    margin:2%;
-    .Coffee-description{
-      max-width: 70%;;
+    margin: 2%;
+    .Coffee-description {
+      max-width: 70%;
     }
     .Coffee-image {
       flex-shrink: 0;
@@ -489,43 +473,41 @@ p {
     .text-content {
       display: flex;
       flex-direction: column;
-      justify-content: center; 
-      flex: 1; 
+      justify-content: center;
+      flex: 1;
 
       h1 {
         font-size: 24px;
-        margin: 0; 
+        margin: 0;
         text-align: left;
       }
 
       p {
         font-size: 15px;
-        margin-top: 30px; 
+        margin-top: 30px;
         opacity: 0.8;
         text-align: left;
-        width:100%;
+        width: 100%;
       }
     }
   }
 
-
-
   //  Why Choose us
-  .ChooseUs{
-    h1,p{
-      width:70%;
+  .ChooseUs {
+    h1,
+    p {
+      width: 70%;
     }
-    h1{
+    h1 {
       padding-top: 10%;
       font-size: 32px;
       line-height: 48px;
     }
-    p{
+    p {
       line-height: 25px;
       font-size: 15px;
     }
   }
-
 
   .CardContainer {
     display: flex;
@@ -533,16 +515,16 @@ p {
     justify-content: center;
     .CardModel {
       display: flex;
-      flex-direction: row; 
-      align-items: center; 
+      flex-direction: row;
+      align-items: center;
       text-align: left;
-      gap: 20px; 
+      gap: 20px;
       max-width: 100%;
-      margin:2%;
+      margin: 2%;
 
       .SvgImage {
         flex-shrink: 0;
-        width: 75px; 
+        width: 75px;
         height: auto;
         margin-left: 10%;
       }
@@ -550,21 +532,21 @@ p {
       .text-content {
         display: flex;
         flex-direction: column;
-        justify-content: center; 
-        flex: 1; 
+        justify-content: center;
+        flex: 1;
 
         h1 {
           font-size: 24px;
-          margin: 0; 
+          margin: 0;
           text-align: left;
-          padding:10% 0 0 10%;
+          padding: 10% 0 0 10%;
         }
 
         p {
           font-size: 15px;
-          margin-top: 5px; 
+          margin-top: 5px;
           opacity: 0.8;
-          padding: 5% 0 10% 10%
+          padding: 5% 0 10% 10%;
         }
       }
     }
