@@ -1,7 +1,7 @@
 import { Bottom } from "../../components/Bottom";
 import { Menu } from "../../components/Menu";
 import "./About.scss";
-
+import imageCommitmenet from "../../assets/about/desktop/image-commitment.jpg";
 export function About() {
   return (
     <div className="container">
@@ -23,7 +23,7 @@ export function About() {
 
       <div className="OurComm">
         <div className="leftSide">
-          <img src="assets/about/desktop/image-commitment.jpg" alt="" />
+          <img src={imageCommitmenet} alt="" />
         </div>
         <div className="rightSide">
           <h1>Our commitment</h1>

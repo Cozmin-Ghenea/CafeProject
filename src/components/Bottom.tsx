@@ -3,22 +3,16 @@ import { Link } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import coffeBean from "../assets/home/desktop/icon-coffee-bean.svg";
 import "./Bottom.scss";
+
 export function Bottom() {
   return (
     <div className="bottom">
       <div className="Logo">
         <div className="combinedBeans">
-          <img
-            className="firstBean"
-            src="/assets/home/desktop/icon-coffee-bean.svg"
-            alt="firstBean"
-          />
-          <img
-            className="secondBean "
-            src="/assets/home/desktop/icon-coffee-bean.svg"
-            alt="secondBean"
-          />
+          <img className="firstBean" src={coffeBean} alt="firstBean" />
+          <img className="secondBean " src={coffeBean} alt="secondBean" />
         </div>
         <div className="logoText">coffeeroasters</div>
       </div>

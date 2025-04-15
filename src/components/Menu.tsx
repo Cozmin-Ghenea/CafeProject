@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { useNavigate } from "react-router-dom";
 import "./Menu.scss";
 import { useEffect, useState } from "react";
-
+import coffeBean from "../assets/home/desktop/icon-coffee-bean.svg";
 export function Menu() {
   const [activeUserName, setActiveUserName] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,16 +34,8 @@ export function Menu() {
     <div className="Menu">
       <div className="Logo">
         <div className="combinedBeans">
-          <img
-            className="firstBean"
-            src="/assets/home/desktop/icon-coffee-bean.svg"
-            alt="firstBean"
-          />
-          <img
-            className="secondBean"
-            src="/assets/home/desktop/icon-coffee-bean.svg"
-            alt="secondBean"
-          />
+          <img className="firstBean" src={coffeBean} alt="firstBean" />
+          <img className="secondBean" src={coffeBean} alt="secondBean" />
         </div>
         <div className="logoText">coffeeroasters</div>
       </div>

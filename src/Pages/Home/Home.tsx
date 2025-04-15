@@ -2,6 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { Bottom } from "../../components/Bottom";
 import { CoffeeWindow } from "../../components/CoffeeWindow";
 import { Menu } from "../../components/Menu";
+import imageGran from "../../assets/home/desktop/image-gran-espresso.png";
+import imagePlanalto from "../../assets/home/desktop/image-planalto.png";
+import imagePiccollo from "../../assets/home/desktop/image-piccollo.png";
+import imageDanche from "../../assets/home/desktop/image-danche.png";
 import "./Home.scss";
 
 export function Home() {
@@ -12,22 +16,22 @@ export function Home() {
 
   const coffeeData = [
     {
-      image: "assets/home/desktop/image-gran-espresso.png",
+      image: imageGran,
       title: "Gran Espresso",
       desc: "Light and flavorful blend with cocoa and black pepper for an intense experience",
     },
     {
-      image: "assets/home/desktop/image-planalto.png",
+      image: imagePlanalto,
       title: "Planalto",
       desc: "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts",
     },
     {
-      image: "assets/home/desktop/image-piccollo.png",
+      image: imagePiccollo,
       title: "Piccollo",
       desc: "Mild and smooth blend featuring notes of toasted almond and dried cherry",
     },
     {
-      image: "assets/home/desktop/image-danche.png",
+      image: imageDanche,
       title: "Danche",
       desc: "Ethiopian hand-harvested blend densely packed with vibrant fruit notes",
     },
