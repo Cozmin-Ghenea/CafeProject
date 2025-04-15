@@ -22,7 +22,7 @@ p {
 }
 
 .descriptionSectionAboutUs {
-  background-image: url("../../assets/about/desktop/image-hero-whitecup.jpg");
+  background-image: url("../..//assets/about/desktop/image-hero-whitecup.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -96,7 +96,7 @@ p {
   gap: 10%;
   justify-content: center;
   margin: 15% auto;
-  background-image: url("../..assets/about/desktop/bg-quality.png");
+  background-image: url("../../assets/about/desktop/bg-quality.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -129,7 +129,7 @@ p {
     position: relative;
     display: flex;
     .img {
-      background-image: url("../..assets/about/desktop/image-quality.jpg");
+      background-image: url("../../assets/about/desktop/image-quality.jpg");
       position: relative;
       background-repeat: no-repeat;
       background-size: cover;
@@ -288,7 +288,7 @@ p {
 
     .rightSide {
       .img {
-        background-image: url("../..assets/about/mobile/image-quality.jpg");
+        background-image: url("../../assets/about/mobile/image-quality.jpg");
         width: 85%;
         height: 200px;
         top: -100px;
@@ -374,7 +374,7 @@ p {
 
     .rightSide {
       .img {
-        background-image: url("../..assets/about/tablet/image-quality.jpg");
+        background-image: url("../../assets/about/tablet/image-quality.jpg");
         width: 85%;
         height: 350px;
         top: -150px;
