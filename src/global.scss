@@ -1,0 +1,30 @@
+// Variabile de culoare
+$LightCream: #fefcf7;
+$DarkCyanClicked: #0e8784;
+
+// Stiluri globale
+h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: $LightCream;
+  text-align: center;
+}
+
+p {
+  font-family: "Barlow", serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.button {
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: $DarkCyanClicked;
+}
+
+.container {
+  background-color: $LightCream;
+  max-width: 100vw;
+}
