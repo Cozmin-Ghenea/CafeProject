@@ -6,6 +6,20 @@ $PaleOrange: rgb(253, 214, 186);
 $LightCream: rgb(254, 252, 247);
 $Grey: rgb(131, 136, 143);
 
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+/* Font pentru heading-uri */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+}
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +39,6 @@ $Grey: rgb(131, 136, 143);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  
 }
 
 a {

@@ -29,7 +29,7 @@ p {
 }
 
 .CreatePlanSection {
-  background-image: url("/plan/desktop/image-hero-blackcup.jpg");
+  background-image: url("~@/assets/plan/desktop/image-hero-blackcup.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -59,7 +59,7 @@ p {
 //    Planning
 
 .PlanSegment {
-  background-image: url("/plan/desktop/bg-steps.png");
+  background-image: url("~@/assets/plan/desktop/bg-steps.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
