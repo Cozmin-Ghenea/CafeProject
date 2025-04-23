@@ -6,30 +6,30 @@ $LightCream: rgb(254, 252, 247);
 $Grey: rgb(131, 136, 143);
 $primary-color: #3498db;
 $Black: rgb(51, 61, 75);
-
-h1 {
-  font-family: "Fraunces", serif;
-  font-weight: 900;
-  color: $LightCream;
-  text-align: center;
+:global {
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    color: $LightCream;
+    text-align: center;
+  }
+  p {
+    font-family: "Barlow", serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .button {
+    transition: background-color 0.3s ease;
+  }
+  .button:hover {
+    background-color: $DarkCyanClicked;
+  }
+  .container {
+    background-color: $LightCream;
+  }
 }
-p {
-  font-family: "Barlow", serif;
-  font-size: 16px;
-  font-weight: 300;
-}
-.button {
-  transition: background-color 0.3s ease;
-}
-.button:hover {
-  background-color: $DarkCyanClicked;
-}
-.container {
-  background-color: $LightCream;
-}
-
 .CreatePlanSection {
-  background-image: url("~@/assets/plan/desktop/image-hero-blackcup.jpg");
+  background-image: url("../assets/plan/desktop/image-hero-blackcup.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -59,7 +59,7 @@ p {
 //    Planning
 
 .PlanSegment {
-  background-image: url("~@/assets/plan/desktop/bg-steps.png");
+  background-image: url("../assets/plan/desktop/bg-steps.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

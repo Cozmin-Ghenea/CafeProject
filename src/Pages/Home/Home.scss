@@ -6,31 +6,31 @@ $LightCream: rgb(254, 252, 247);
 $Grey: rgb(131, 136, 143);
 $primary-color: #3498db;
 $Black: rgb(51, 61, 75);
-
-h1 {
-  font-family: "Fraunces", serif;
-  font-weight: 900;
-  color: $LightCream;
-  text-align: center;
+:global {
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    color: $LightCream;
+    text-align: center;
+  }
+  p {
+    font-family: "Barlow", serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .button {
+    transition: background-color 0.3s ease;
+  }
+  .button:hover {
+    background-color: $DarkCyanClicked;
+  }
+  .container {
+    background-color: $LightCream;
+    max-width: 100vw;
+  }
 }
-p {
-  font-family: "Barlow", serif;
-  font-size: 16px;
-  font-weight: 300;
-}
-.button {
-  transition: background-color 0.3s ease;
-}
-.button:hover {
-  background-color: $DarkCyanClicked;
-}
-.container {
-  background-color: $LightCream;
-  max-width: 100vw;
-}
-
 .descriptionSection {
-  background-image: url("~@/assets/home/desktop/image-hero-coffeepress.jpg");
+  background-image: url("../assets/home/desktop/image-hero-coffeepress.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
